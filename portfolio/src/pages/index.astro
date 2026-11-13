@@ -1,0 +1,90 @@
+---
+import "../styles/global.css";
+const photos = [
+  ["01 / EL DESAFÍO", "Foto fútbol · errando un penal"],
+  ["02 / LA PREPARACIÓN", "Foto fútbol · pateando un tiro libre"],
+  ["03 / EL EQUIPO", "Foto fútbol · trabajo en equipo 1"],
+  ["04 / COMPARTIR", "Foto fútbol · trabajo en equipo 2"],
+  ["05 / LOS LOGROS", "Foto fútbol · con una medalla"],
+];
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fdfdfb" />
+  <meta name="description" content="Portfolio personal de Thiago Yusefoff: fútbol, educación no formal y proyectos escolares." />
+  <title>Thiago Yusefoff | Portfolio</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-inner" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">THIAGO YUSEFOFF / PORTFOLIO</a>
+      <div class="nav-links">
+        <a href="#inicio">INICIO</a><a href="#futbol">FÚTBOL</a><a href="#educacion">EDUCACIÓN</a><a href="#escuela">ESCUELA</a><a href="#contacto">CONTACTO</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio"><div class="container">
+      <h1>El equipo primero.<br />Siempre seguir adelante.</h1>
+      <p>Futbolista · Educador en formación · Estudiante</p>
+    </div></section>
+
+    <section class="football" id="futbol"><div class="container">
+      <div class="football-intro">
+        <h2>FÚTBOL Y EQUIPO</h2><h3>Nunca dejar de intentar.</h3>
+        <p>En la cancha aprendí que los errores no definen el camino: lo importante es seguir intentando y aportar al equipo.</p>
+      </div>
+      <h2 class="section-title gallery-title">MOMENTOS EN LA CANCHA</h2>
+      <div class="gallery">
+        {photos.map(([label, description]) => <div class="photo-placeholder" aria-label={description}>
+          <small>{label}</small><span>{description}<br />Reemplazá este espacio por tu foto</span>
+        </div>)}
+      </div>
+      <div class="story"><p>Empecé de chico en otro equipo, pero mi objetivo siempre fue el mismo: aportar para que al equipo le vaya bien. Tuve fracasos y también buenos momentos; en ninguno cambié mi manera de pensar. Aprendí a no rendirme y a poner los resultados colectivos por delante de cualquier reconocimiento individual.</p></div>
+    </div></section>
+
+    <section class="education" id="educacion"><div class="container">
+      <h2 class="section-title">EDUCACIÓN NO FORMAL</h2>
+      <div class="education-grid">
+        <article class="education-main"><div>
+          <h3>Jugar y aprender al mismo tiempo.</h3>
+          <p>Trabajé con chicos de sala de 4 años, 1.º, 3.º y 6.º grado. En cada grupo propuse actividades para jugar y aprender a la vez, adaptándome a distintas edades. Todavía estoy aprendiendo y creciendo como educador.</p>
+        </div><div class="photo-placeholder education-photo"><span>Foto educación no formal · grupo de chicos</span></div></article>
+        <aside class="groups-card"><h3>GRUPOS CON LOS QUE TRABAJÉ</h3>
+          <ul><li>Sala de 4 años</li><li>Primer grado</li><li>Tercer grado</li><li>Sexto grado</li></ul>
+        </aside>
+      </div>
+    </div></section>
+
+    <section class="school" id="escuela"><div class="container">
+      <h2 class="section-title">ANTECEDENTES ESCOLARES</h2>
+      <div class="school-grid">
+        <article class="school-card"><h3>Tres años, tres proyectos.</h3>
+          <p>Durante tres años participé en proyectos diferentes. Aprendí a organizarme, trabajar en equipo y asumir cada propuesta con más responsabilidad.</p></article>
+        <article class="projects-card"><h3>Ideas que se convierten en proyectos.</h3>
+          <p>Cada proyecto fue una oportunidad para transformar ideas en algo concreto. El actual nace de una idea que nos entusiasma y del trabajo compartido.</p></article>
+      </div>
+    </div></section>
+
+    <section class="pillars" aria-label="Mis tres pilares"><div class="container pillar-grid">
+      <article class="pillar"><h3>FÚTBOL</h3><p>Aprender a perseverar y priorizar al equipo.</p></article>
+      <article class="pillar"><h3>EDUCACIÓN</h3><p>Usar el juego para incluir, compartir y aprender.</p></article>
+      <article class="pillar"><h3>ESCUELA</h3><p>Convertir ideas en proyectos con responsabilidad.</p></article>
+    </div></section>
+
+    <section class="contact" id="contacto"><div class="container">
+      <h2>Los próximos desafíos<br />se construyen en equipo.</h2>
+      <p>Estoy abierto a nuevos desafíos, aprendizajes y proyectos construidos en comunidad.</p>
+      <div class="contact-links">
+        <a href="mailto:TU-EMAIL@ejemplo.com">HABLEMOS ↗</a>
+        <a href="mailto:TU-EMAIL@ejemplo.com">[EMAIL]</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">[LINKEDIN]</a>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container">© {new Date().getFullYear()} Thiago Yusefoff · Portfolio personal</div></footer>
+</body>
+</html>
