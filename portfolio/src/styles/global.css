@@ -154,13 +154,13 @@ h1, h2, h3 {
   margin: 0 0 28px 4px;
 }
 
-/* GALERÍA DE FOTOS */
+/* GALERÍA */
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 280px 280px;
-  gap: 20px;
+  gap: 24px;
+  align-items: start;
 }
 
 .photo-card {
@@ -168,50 +168,69 @@ h1, h2, h3 {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background: var(--muted);
-  box-shadow: 0 8px 18px rgba(20, 41, 64, .14);
+  background: var(--white);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .13);
   display: flex;
   flex-direction: column;
+  align-self: start;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, .19);
 }
 
 .photo-card img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 0;
-  flex: 1;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  flex: none;
+  object-fit: contain;
+}
+
+/* PRIMERAS TRES FOTOS */
+
+.gallery > :nth-child(1),
+.gallery > :nth-child(2) {
+  grid-column: span 2;
+}
+
+/* MEDALLA: TARJETA VERTICAL */
+
+.gallery > :nth-child(3) {
+  grid-column: span 2;
+  width: min(100%, 245px);
+  justify-self: center;
+}
+
+/* FOTOS DE EQUIPO */
+
+.gallery > :nth-child(4),
+.gallery > :nth-child(5) {
+  grid-column: span 3;
 }
 
 .photo-card figcaption {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 14px 16px;
+  gap: 5px;
+  padding: 10px 14px;
   background: var(--white);
   color: var(--ink);
 }
 
 .photo-card figcaption small {
   color: var(--navy);
-  font-weight: 700;
-  font-size: .62rem;
-  letter-spacing: .04em;
+  font-weight: 800;
+  font-size: .6rem;
+  letter-spacing: .055em;
 }
 
 .photo-card figcaption span {
-  font-size: .85rem;
-  line-height: 1.4;
-}
-
-.gallery > :nth-child(-n+3) {
-  grid-column: span 2;
-}
-
-.gallery > :nth-child(n+4) {
-  grid-column: span 3;
+  font-size: .82rem;
+  line-height: 1.35;
 }
 
 .story {
@@ -439,8 +458,11 @@ footer {
   }
 
   .gallery {
-    grid-template-rows: 240px 240px;
-    gap: 14px;
+    gap: 16px;
+  }
+
+  .gallery > :nth-child(3) {
+    width: min(100%, 200px);
   }
 }
 
@@ -498,16 +520,20 @@ footer {
 
   .gallery {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 230px);
     gap: 12px;
   }
 
-  .gallery > :nth-child(n) {
+  .gallery > :nth-child(1),
+  .gallery > :nth-child(2),
+  .gallery > :nth-child(4),
+  .gallery > :nth-child(5) {
     grid-column: span 1;
+    width: 100%;
   }
 
   .gallery > :nth-child(3) {
     grid-column: span 2;
+    width: min(100%, 210px);
   }
 
   .gallery-title {
@@ -515,15 +541,15 @@ footer {
   }
 
   .photo-card figcaption {
-    padding: 11px;
+    padding: 7px 9px;
   }
 
   .photo-card figcaption span {
-    font-size: .76rem;
+    font-size: .7rem;
   }
 
   .photo-card figcaption small {
-    font-size: .53rem;
+    font-size: .52rem;
   }
 
   .story {
