@@ -10,7 +10,7 @@ import fotomedalla from "../imagenes/fotoMedalla.jpeg";
 import madrij from "../imagenes/madrij.jpeg";
 import insign from "../imagenes/insign.jpeg";
 
-const photos = [
+const fotos = [
   ["01 / EL DESAFÍO", penal, "Un momento de aprendizaje en la cancha"],
   ["02 / LA PREPARACIÓN", entrenamiento, "Entrenamiento y esfuerzo"],
   ["03 / EL EQUIPO", fotomedalla, "Un logro y un recuerdo especial"],
@@ -62,7 +62,7 @@ const photos = [
         <h2 class="section-title gallery-title">MOMENTOS EN LA CANCHA</h2>
 
         <div class="gallery">
-          {photos.map(([label, src, description], index) => (
+          {fotos.map(([label, src, description], index) => (
             <figure class="photo-card">
               <img
                 class:list={{
