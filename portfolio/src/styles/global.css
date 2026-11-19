@@ -304,7 +304,7 @@ h1, h2, h3 {
 }
 
 .groups-card {
-  background: var(--blue);
+  background: var(--paper);
   color: var(--navy);
   padding: 58px 28px;
 }
@@ -419,18 +419,11 @@ h1, h2, h3 {
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   color: var(--blue);
   font: 800 1rem 'Manrope', sans-serif;
-}
-
-.contact-links a {
-  text-decoration: none;
-}
-
-.contact-links a:hover {
-  text-decoration: underline;
 }
 
 /* FOOTER */
