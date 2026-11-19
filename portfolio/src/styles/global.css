@@ -94,9 +94,9 @@ h1, h2, h3 {
   color: var(--blue);
 }
 
-/* HERO */
+/* presentacion */
 
-.hero {
+.presentacion {
   min-height: 640px;
   padding: 100px 0;
   background: var(--pale);
@@ -104,19 +104,19 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.hero-content {
+.presentacion-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
 
-.hero-text {
+.presentacion-text {
   flex: 1;
   min-width: 0;
 }
 
-.hero h1 {
+.presentacion h1 {
   max-width: 700px;
   color: var(--navy);
   font-size: 4rem;
@@ -125,12 +125,12 @@ h1, h2, h3 {
   margin-bottom: 30px;
 }
 
-.hero p {
+.presentacion p {
   font-size: 1.4rem;
   margin: 0;
 }
 
-.hero-photo {
+.presentacion-photo {
   width: 400px;
   height: 400px;
   flex-shrink: 0;
@@ -139,7 +139,7 @@ h1, h2, h3 {
   border: 6px solid var(--white);
 }
 
-.hero-photo img {
+.presentacion-photo img {
   display: block;
   width: 100%;
   height: 100%;
