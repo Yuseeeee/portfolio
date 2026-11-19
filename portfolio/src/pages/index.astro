@@ -9,6 +9,8 @@ import penal from "../imagenes/penal.jpeg";
 import fotomedalla from "../imagenes/fotoMedalla.jpeg";
 import madrij from "../imagenes/madrij.jpeg";
 import insign from "../imagenes/insign.jpeg";
+import fotoMia from "../imagenes/fotoMia.jpeg";
+
 const photos = [
   ["EL DESAFÍO", penal, "Un momento de aprendizaje en la cancha"],
   ["LA PREPARACIÓN", entrenamiento, "Entrenamiento y esfuerzo"],
@@ -32,10 +34,11 @@ const photos = [
   <header class="site-header">
     <nav class="container nav-inner" aria-label="Navegación principal">
       <a class="brand" href="#inicio">THIAGO YUSEFOFF / PORTFOLIO</a>
+
       <div class="nav-links">
         <a href="#inicio">INICIO</a>
-        <a href="#futbol">FUTBOL</a>
-        <a href="#educacion">EDMA</a>
+        <a href="#futbol">FÚTBOL</a>
+        <a href="#educacion">EDUCACIÓN</a>
         <a href="#escuela">ESCUELA</a>
         <a href="#contacto">CONTACTO</a>
       </div>
@@ -43,19 +46,36 @@ const photos = [
   </header>
 
   <main>
+    <!-- INICIO -->
     <section class="hero" id="inicio">
-      <div class="container">
-        <h1>El equipo primero.<br />Siempre seguir adelante.</h1>
-        <p>Futbolista · Educador en formación · Estudiante</p>
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <h1>El equipo primero.<br />Siempre seguir adelante.</h1>
+          <p>Futbolista · Educador en formación · Estudiante</p>
+        </div>
+
+        <div class="hero-photo">
+          <img
+            src={fotoMia.src}
+            alt="Retrato personal"
+            fetchpriority="high"
+          />
+        </div>
+
       </div>
     </section>
 
+    <!-- FÚTBOL -->
     <section class="football" id="futbol">
       <div class="container">
         <div class="football-intro">
-          <h2>FUTBOL Y EQUIPO</h2>
+          <h2>FÚTBOL Y EQUIPO</h2>
           <h3>Nunca dejar de intentar.</h3>
-          <p>En la cancha aprendi que los errores no definen el camino: lo importante es seguir intentando y aportar al equipo.</p>
+          <p>
+            En la cancha aprendí que los errores no definen el camino:
+            lo importante es seguir intentando y aportar al equipo.
+          </p>
         </div>
 
         <h2 class="section-title gallery-title">MOMENTOS EN LA CANCHA</h2>
@@ -71,6 +91,7 @@ const photos = [
                 alt={description}
                 loading="lazy"
               />
+
               <figcaption>
                 <small>{label}</small>
                 <span>{description}</span>
@@ -80,11 +101,18 @@ const photos = [
         </div>
 
         <div class="story">
-          <p>Empecé de chico en otro equipo, pero mi objetivo siempre fue el mismo, aportar para que al equipo le vaya bien. Tuve fracasos y también buenos momentos, pero en ninguno cambie mi manera de pensar. Aprendi a no rendirme y a poner los resultados colectivos por delante de cualquier reconocimiento individual.</p>
+          <p>
+            Empecé de chico en otro equipo, pero mi objetivo siempre fue el mismo:
+            aportar para que al equipo le vaya bien. Tuve fracasos y también
+            buenos momentos, pero en ninguno cambié mi manera de pensar.
+            Aprendí a no rendirme y a poner los resultados colectivos por
+            delante de cualquier reconocimiento individual.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- EDUCACIÓN NO FORMAL -->
     <section class="education" id="educacion">
       <div class="container">
         <h2 class="section-title">EDUCACIÓN NO FORMAL</h2>
@@ -93,7 +121,12 @@ const photos = [
           <article class="education-main">
             <div>
               <h3>Jugar y aprender al mismo tiempo.</h3>
-              <p>Trabajé con chicos de sala de 4 años, 1.º, 3.º y 6.º grado. En cada grupo propuse actividades para jugar y aprender a la vez, adaptandome a distintas edades. Todavía estoy aprendiendo y creciendo como educador.</p>
+              <p>
+                Trabajé con chicos de sala de 4 años, 1.º, 3.º y 6.º grado.
+                En cada grupo propuse actividades para jugar y aprender a la vez,
+                adaptándome a distintas edades. Todavía estoy aprendiendo
+                y creciendo como educador.
+              </p>
             </div>
 
             <img
@@ -101,7 +134,6 @@ const photos = [
               src={madrij.src}
               alt="Experiencia como educador en educación no formal"
               loading="lazy"
-              style="object-fit: cover; display: block;"
             />
           </article>
 
@@ -118,7 +150,7 @@ const photos = [
       </div>
     </section>
 
-    
+    <!-- ESCUELA -->
     <section class="school" id="escuela">
       <div class="container">
         <h2 class="section-title">ANTECEDENTES ESCOLARES</h2>
@@ -126,26 +158,37 @@ const photos = [
         <div class="school-grid">
           <article class="school-card">
             <h3>Tres años, tres proyectos.</h3>
-            <p>Durante tres años participé en proyectos diferentes. Aprendí a organizarme, trabajar en equipo y asumir cada propuesta con más responsabilidad.</p>
+            <p>
+              Durante tres años participé en proyectos diferentes.
+              Aprendí a organizarme, trabajar en equipo y asumir cada
+              propuesta con más responsabilidad.
+            </p>
           </article>
 
           <article class="projects-card insign-card">
             <div class="insign-copy">
               <h3>Ideas que se convierten en proyectos.</h3>
-              <p>Cada proyecto fue una oportunidad para transformar ideas en algo concreto. El actual nace de una idea que nos entusiasma y del trabajo compartido.</p>
+
               <p>
-                Este año desarrollé InSign, un proyecto que busca crear un recurso
-                para que los chicos aprendan a comunicarse mediante la Lengua de
-                Señas Argentina (LSA) desde edades tempranas. La idea es facilitar
-                la comunicación y la interacción con otras personas, ayudando a
-                evitar barreras que puedan dificultar su socialización en el futuro.
+                Cada proyecto fue una oportunidad para transformar ideas
+                en algo concreto. El actual nace de una idea que nos
+                entusiasma y del trabajo compartido.
+              </p>
+
+              <p>
+                Este año desarrollé InSign, un proyecto que busca crear
+                un recurso para que los chicos aprendan a comunicarse
+                mediante la Lengua de Señas Argentina (LSA) desde edades
+                tempranas. La idea es facilitar la comunicación y la
+                interacción con otras personas, ayudando a evitar barreras
+                que puedan dificultar su socialización en el futuro.
               </p>
             </div>
 
             <div class="insign-image-wrap">
               <img
                 src={insign.src}
-                alt="Proyecto escolar Insign"
+                alt="Proyecto escolar InSign"
                 loading="lazy"
               />
             </div>
@@ -154,10 +197,11 @@ const photos = [
       </div>
     </section>
 
+    <!-- PILARES -->
     <section class="pillars" aria-label="Mis tres pilares">
       <div class="container pillar-grid">
         <article class="pillar">
-          <h3>FUTBOL</h3>
+          <h3>FÚTBOL</h3>
           <p>Aprender a perseverar y priorizar al equipo.</p>
         </article>
 
@@ -173,14 +217,21 @@ const photos = [
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section class="contact" id="contacto">
       <div class="container">
-        <h2>Los proximos desafíos<br />se construyen en equipo.</h2>
-        <p>Estoy abierto a nuevos desafios, aprendizajes y proyectos construidos en comunidad.</p>
+        <h2>Los próximos desafíos<br />se construyen en equipo.</h2>
+
+        <p>
+          Estoy abierto a nuevos desafíos, aprendizajes y proyectos
+          construidos en comunidad.
+        </p>
 
         <div class="contact-links">
           <h3>CONTACTO</h3>
-          <a href="mailto:thiagoyusefoff@icloud.com">thiagoyusefoff@icloud.com</a>
+          <a href="mailto:thiagoyusefoff@icloud.com">
+            thiagoyusefoff@icloud.com
+          </a>
         </div>
       </div>
     </section>
