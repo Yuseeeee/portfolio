@@ -47,7 +47,6 @@ h1, h2, h3 {
   margin-inline: auto;
 }
 
-/* HEADER */
 
 .site-header {
   position: sticky;
@@ -94,7 +93,6 @@ h1, h2, h3 {
   color: var(--blue);
 }
 
-/* presentacion */
 
 .presentacion {
   min-height: 640px;
@@ -294,7 +292,7 @@ h1, h2, h3 {
 .groups-card,
 .school-card,
 .projects-card,
-.pillar {
+.pilares {
   border-radius: 18px;
   overflow: hidden;
 }
@@ -407,23 +405,23 @@ h1, h2, h3 {
   background: var(--pale);
 }
 
-.pillar-grid {
+.pilares-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.pillar {
+.pilares {
   padding: 28px 30px;
 }
 
-.pillar h3 {
+.pilares h3 {
   color: var(--navy);
   font-size: 1.6rem;
   margin-bottom: 14px;
 }
 
-.pillar p {
+.pilares p {
   line-height: 1.5;
   margin: 0;
 }
@@ -478,4 +476,32 @@ footer {
   color: #aebdc7;
   border-top: 1px solid rgba(255, 255, 255, .12);
   font-size: .82rem;
+}
+
+
+.insign-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 38%);
+  align-items: center;
+  gap: 32px;
+}
+
+.insign-copy {
+  min-width: 0;
+}
+
+.insign-image-wrap {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.insign-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 68%;
+  border-radius: 14px;
 }
